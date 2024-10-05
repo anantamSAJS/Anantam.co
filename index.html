@@ -49,11 +49,11 @@
         <!-- Mobile menu, show/hide based on menu open state. -->
         <div class="lg:hidden" role="dialog" aria-modal="true">
           <div class="fixed inset-0 z-50"></div>
-          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Anantam.co</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                <img class="h-8 w-auto" src="Components/1.JPG" alt="">
               </a>
               <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                 <span class="sr-only">Close menu</span>
@@ -65,11 +65,11 @@
             <div class="mt-6 flow-root">
               <div class="-my-6 divide-y divide-gray-500/10">
                 <div class="space-y-2 py-6">
-                  <a href="PLanding.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Product</a>
-                  <a href="#steps-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Speciality</a>
-                  <a href="#about-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">About</a>
-                  <a href="#features-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Features</a>
-                  <a href="#contact-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Contact Us</a>
+                  <a href="PLanding.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Product</a>
+                  <a href="#steps-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Speciality</a>
+                  <a href="#about-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">About</a>
+                  <a href="#features-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Features</a>
+                  <a href="#contact-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Contact Us</a>
                 </div>
                 <div class="py-6">
                 </div>
@@ -1041,21 +1041,24 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-  // Select the menu button and close button
+  // Select the elements
   const menuButton = document.querySelector('button[aria-label="Open main menu"]');
   const closeButton = document.querySelector('button[aria-label="Close menu"]');
   const mobileMenu = document.querySelector('div[role="dialog"]');
+  
+  // Ensure the menu starts as hidden
+  mobileMenu.classList.add('hidden');
 
   // Function to open the menu
   menuButton.addEventListener('click', function () {
-    mobileMenu.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Disable scrolling
+    mobileMenu.classList.remove('hidden');  // Show the menu
+    document.body.style.overflow = 'hidden'; // Disable body scrolling
   });
 
   // Function to close the menu
   closeButton.addEventListener('click', function () {
-    mobileMenu.classList.add('hidden');
-    document.body.style.overflow = ''; // Re-enable scrolling
+    mobileMenu.classList.add('hidden');  // Hide the menu
+    document.body.style.overflow = ''; // Re-enable body scrolling
   });
 });
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
