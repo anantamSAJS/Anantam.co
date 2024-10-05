@@ -1040,19 +1040,6 @@
 </section>
 
 <script>
-    function toggleMenu() {
-          const menu = document.getElementById('mobileMenu');
-          menu.classList.toggle('hidden');
-          document.body.style.overflow = menu.classList.contains('hidden') ? '' : 'hidden'; // Prevent scrolling when menu is open
-        }
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
     document.addEventListener('DOMContentLoaded', function () {
   // Select the menu button and close button
   const menuButton = document.querySelector('button[aria-label="Open main menu"]');
@@ -1071,6 +1058,14 @@
     document.body.style.overflow = ''; // Re-enable scrolling
   });
 });
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
 </script>
 </body>
 </html>
