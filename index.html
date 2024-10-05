@@ -65,11 +65,11 @@
             <div class="mt-6 flow-root">
               <div class="-my-6 divide-y divide-gray-500/10">
                 <div class="space-y-2 py-6">
-                  <a href="PLanding.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Product</a>
-                  <a href="#steps-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Speciality</a>
-                  <a href="#about-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">About</a>
-                  <a href="#features-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Features</a>
-                  <a href="#contact-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Contact Us</a>
+                  <a href="PLanding.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Product</a>
+                  <a href="#steps-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Speciality</a>
+                  <a href="#about-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">About</a>
+                  <a href="#features-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Features</a>
+                  <a href="#contact-section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Contact Us</a>
                 </div>
                 <div class="py-6">
                 </div>
@@ -1053,6 +1053,24 @@
       });
     });
   });
+    document.addEventListener('DOMContentLoaded', function () {
+  // Select the menu button and close button
+  const menuButton = document.querySelector('button[aria-label="Open main menu"]');
+  const closeButton = document.querySelector('button[aria-label="Close menu"]');
+  const mobileMenu = document.querySelector('div[role="dialog"]');
+
+  // Function to open the menu
+  menuButton.addEventListener('click', function () {
+    mobileMenu.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+  });
+
+  // Function to close the menu
+  closeButton.addEventListener('click', function () {
+    mobileMenu.classList.add('hidden');
+    document.body.style.overflow = ''; // Re-enable scrolling
+  });
+});
 </script>
 </body>
 </html>
