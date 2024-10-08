@@ -900,6 +900,24 @@
         transform: translateX(0);
      }
   }
+    #scrollTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position at bottom right */
+            bottom: 20px;
+            right: 20px;
+            z-index: 100; /* Make sure it appears above other content */
+            font-size: 18px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #555;
+        }
 </style>
 <section>
   <div id="features-section" class="p-4 max-w-xl mx-auto bg-transparent"></div>
@@ -1038,6 +1056,12 @@
     </div>
   </div>
 </section>
+<div style="height: 1500px;">
+        <p>This is a long page with some content. Keep scrolling to see the button!</p>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn">Top</button>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1069,6 +1093,24 @@
       });
     });
   });
+    let scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Show the button when scrolled down 100px
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Function to scroll to the top when the button is clicked
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
 </script>
 </body>
 </html>
